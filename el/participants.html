@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Τα Σεμινάρια της Λέρου</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../app.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-container">
+                <img src="../images/logos/lhs.png" alt="Logo for The Leros Humanism Seminars" class="lhs-logo-header">
+                <h1 class="logo-text">Τα Σεμινάρια της Λέρου</h1>
+            </a>
+            <div class="navbar-link-container">
+                <a href="about.html" class="navbar-about">Description</a>
+                <a href="participants.html" class="navbar-participants">Συμμετέχοντες</a>
+                <a href="resources.html" class="navbar-resources">Resources</a>
+                <a href="sponsors.html" class="navbar-sponsors">Sponsors</a>
+                <a href="archive.html" class="navbar-archive">Archive</a>
+                <div class="lang-selection">
+                    <button name="en" class="language-button selected-language" onclick="selectLanguage('en')">EN</button>
+                    <span>|</span>
+                    <button name="el" class="language-button" onclick="selectLanguage('el')">EL</button>                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="section-container">
+            <h2 class="section-title">Συμμετέχοντες</h2>
+            <div class="section-content">
+                <ul class="participants-list">
+                    <li class="participants-bold">Columbia University</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="https://justiceineducation.columbia.edu/the-latest-from-ivan-calaff/" target="_blank">Ivan Calaff, Πρόγραμμα Δικαιοσύνης στην Εκπαίδευση</a></li>
+                            <li class="participants"><a href="https://justiceineducation.columbia.edu/eileen-gillooly/" target="_blank">Eileen Gillooly, Πρόγραμμα Δικαιοσύνης στην Εκπαίδευση</a></li>
+                            <li class="participants"><a href="https://cccct.law.columbia.edu/people/bernard-e-harcourt" target="_blank">Bernard Harcourt, Νομική Σχολή και Πολιτικές Επιστήμες</a></li>
+                            <li class="participants"><a href="https://cccct.law.columbia.edu/people/marissa-gutierrez-vicario" target="_blank">Marissa Gutierrez-Vicario, Νομική Σχολή</a></li>
+                            <li class="participants"><a href="https://justiceineducation.columbia.edu/mia-ruyter/" target="_blank">Mia Ruyter, Πρόγραμμα Δικαιοσύνης στην Εκπαίδευση</a></li>
+                            <li class="participants"><a href="https://cccct.law.columbia.edu/people/fonda-shen" target="_blank">Fonda Shen, Νομική Σχολή</a></li>
+                            <li class="participants"><a href="https://polisci.columbia.edu/content/nadia-urbinati" target="_blank">Nadia Urbinati, Πολιτικές Επιστήμες</a></li>
+                        </ul>
+                    <li class="participants-bold">Cooper Union</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="https://archweb.cooper.edu/faculty/faculty/bone.html" target="_blank">Kevin Bone, Αρχιτεκτονική</a></li>
+                        </ul>
+                    <li class="participants-bold">FAU- Florida Atlantic University</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="https://www.fau.edu/artsandletters/anthro/facultypages/garriga-lopez/" target="_blank">Adriana Garriga-Lopez, Ανθρωπολογία</a></li>
+                        </ul>
+                    <li class="participants-bold">Πάντειο Πανεπιστήμιο</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="" target="_blank">Αθηνά Αθανασίου, Ανθρωπολογία</a></li>
+                            <li class="participants"><a href="https://panteion.academia.edu/PenelopePetsini" target="_blank">Πηνελόπη Πετσίνη, Πολιτικές Επιστήμες και Ιστορία</a></li>
+                        </ul>
+                    <li class="participants-bold">Rhode Island School of Design</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="https://www.risd.edu/academics/history-philosophy-and-social-sciences/faculty/katherine-katerina-stefatos" target="_blank">Κατερίνα Στεφάτου, Ιστορία, Φιλοσοφία, και Κοινωνικές Επιστήμες</a></li>
+                            <li class="participants"><a href="http://www.dimaterialist.net/" target="_blank">Δημήτρης Παπαδόπουλος,  Ανθρωπολογία, Teaching and Learning Lab</a></li>
+                        </ul>
+                    <li class="participants-bold">University of California, Los Angeles (UCLA)</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="https://complit.ucla.edu/person/aamir-r-mufti/" target="_blank">Aamir Mufti, Συγκριτική Λογοτεχνία</a></li>
+                            <li class="participants"><a href="https://arthistory.ucla.edu/faculty-profiles/saloni-mathur/" target="_blank">Saloni Mathur, Ιστορία της Τέχνης</a></li>
+                        </ul>
+                    <li class="participants-bold">Πανεπιστήμιο Θεσσαλίας</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="http://www.arch.uth.gr/en/staff/P_Giannisi" target="_blank">Φοίβη Γιαννίση,  Αρχιτεκτονική</a></li>
+                            <li class="participants"><a href="http://www.arch.uth.gr/en/staff/Z_Kotionis" target="_blank">Zήσης Κοτιώνης, Αρχιτεκτονική</a></li>
+                            <li class="participants"><a href="" target="_blank">Iωάννα Λαλιώτου, IAKA/Τομέας Ιστορίας</a></li>
+                            <li class="participants"><a href="" target="_blank">Ελενα Τζελέπη, IAKA/Τομέας Ανθρωπολογίας</a></li>
+                        </ul>
+                    <li class="participants-bold">Μη Πανεπιστημιακοί Ερευνητές/τριες</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="http://www.eugeniabone.com/" target="_blank">Eugenia Bone, Ερευνήτρια/Συγγραφέας</a></li>
+                            <li class="participants"><a href="https://leros-artists.gr/megalooikonomou-theodoros/" target="_blank">Θεόδωρος Μεγαλοιοικόμου, Ψυχίατρος</a></li>
+                            <li class="participants"><a href="https://www.photofestival.gr/exhibitions/nikos-panayotopoulos" target="_blank">Νίκος Παναγιωτόπουλος , Φωτογράφος</a></li>
+                            <li class="participants"><a href="https://nefeli.fairead.net/leros-arxeio-6d" target="_blank">Παναγιώτης Παπαδόπουλος, Πολιτικός κρατούμενος 1967-1970</a></li>
+                            <li class="participants"><a href="https://nefeli.fairead.net/leros-arxeio-6c" target="_blank">Γεωργία Σαρηγιαννίδου, Πολιτική κρατούμενη 1968-1971</a></li>                        
+                        </ul>
+                    <li class="participants-bold">Μεταπτυχιακά/Διδακτορικά</li>
+                        <ul class="participants-sublist">
+                            <li class="participants"><a href="https://www.ssrc.org/fellows/59327155-238b-ea11-a811-000d3a591fb8/" target="_blank">Chloé Howe Haralambous, Συγκριτική Λογοτεχνία, Columbia University</a></li>
+                            <li class="participants"><a href="https://complit.ucla.edu/person/suleiman-hodali/" target="_blank">Suleiman Hodali, Συγκριτική Λογοτεχνία, UCLA</a></li>
+                            <li class="participants"><a href="" target="_blank">Jake Lasky, Ανθρωπολογία, Atlantic Florida University</a></li>
+                            <li class="participants"><a href="https://french.columbia.edu/content/andre-pettman" target="_blank">André Luke Pettman, Τμήμα Γαλλικών/Πολιτική Θεωρία, Columbia University</a></li>
+                            <li class="participants"><a href="https://epic.ucla.edu/person/haider-shahbaz/" target="_blank">Haider Shahbaz, Συγκριτική Λογοτεχνία, UCLA</a></li>    
+                            <li class="participants"><a href="" target="_blank"></a>Jamel West, Ανθρωπολογία Atlantic Florida University</a></li>                                            
+                        </ul>               
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <hr>
+        <div class="logo-container">
+            <img src="../images/logos/lhs.png" alt="Logo for The Leros Humanism Seminars" class="lhs-logo-footer">
+            <h1 class="footer-logo-text">Τα Σεμινάρια της Λέρου</h1>
+        </div>
+        <div class="info-container">
+            <div class="address">
+                <p>Leros, Greece (exact location TBD)</p>
+            </div>
+            <div class="contact">
+                <p class="contact-email" onclick="sendEmail('np255@columbia.edu')">np255@columbia.edu</p>
+                <p class="contact-email" onclick="sendEmail('ssg93@columbia.edu')">ssg93@columbia.edu</p>
+            </div>
+        </div>     
+    </div>
+</body>
+</html>
+
+

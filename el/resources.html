@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Τα Σεμινάρια της Λέρου</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../app.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-container">
+                <img src="../images/logos/lhs.png" alt="Logo for The Leros Humanism Seminars" class="lhs-logo-header">
+                <h1 class="logo-text">Τα Σεμινάρια της Λέρου</h1>
+            </a>
+            <div class="navbar-link-container">
+                <a href="about.html" class="navbar-about">Description</a>
+                <a href="participants.html" class="navbar-participants">Συμμετέχοντες</a>
+                <a href="resources.html" class="navbar-resources">Resources</a>
+                <a href="sponsors.html" class="navbar-sponsors">Sponsors</a>
+                <a href="archive.html" class="navbar-archive">Archive</a>
+                <div class="lang-selection">
+                    <button name="en" class="language-button selected-language" onclick="selectLanguage('en')">EN</button>
+                    <span>|</span>
+                    <button name="el" class="language-button" onclick="selectLanguage('el')">EL</button>                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="section-container">
+            <h2 class="section-title">Resources</h2>
+        </div>
+        <div class="resource-cards-container">
+            <a href="https://www.academia.edu/51282541/Archaeology_architecture_and_politics_A_post_historical_exhibition_in_Rome_about_the_Dodecanese"  target="_blank" class="resource-card">
+                <h2 class="resource-title">Archaeology, architecture and politics: A post-historical exhibition in Rome about the Dodecanese</h2>
+                <p class="citation">Essays on neohellenic architecture, Athens, 2001, p.350-365</p>
+                <div class="resource-author-container">
+                    <p class="resource-author">Helen Fessas-Emmanouil</p>
+                </div>
+            </a>
+            <a href="https://www.researchgate.net/publication/13966974_From_Leros_Asylum_To_Community-Based_Facilities_Levels_of_Functioning_and_Quality_of_Life_Among_Hostel_Residents_in_Greece" target="_blank" class="resource-card dark-green">
+                <h2 class="resource-title">From Leros Asylum To Community-Based Facilities: Levels of Functioning and Quality of Life Among Hostel Residents in Greece</h2>
+                <p class="citation">International Journal of Social Psychiatry (1997) Vol. 43 No. 2, p.104-115</p>
+                <div class="resource-author-container">
+                    <p class="resource-author">Anastasia Zissi</p>
+                    <p class="resource-author">Margaret Barry</p>                   
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="footer-seperator"></div>
+    <div class="footer">
+        <hr>
+        <div class="logo-container">
+            <img src="../images/logos/lhs.png" alt="Logo for The Leros Humanism Seminars" class="lhs-logo-footer">
+            <h1 class="footer-logo-text">Τα Σεμινάρια της Λέρου</h1>
+        </div>
+        <div class="info-container">
+            <div class="address">
+                <p>Leros, Greece (exact location TBD)</p>
+            </div>
+            <div class="contact">
+                <p class="contact-email" onclick="sendEmail('np255@columbia.edu')">np255@columbia.edu</p>
+                <p class="contact-email" onclick="sendEmail('ssg93@columbia.edu')">ssg93@columbia.edu</p>
+            </div>
+        </div>     
+    </div>
+</body>
+</html>
+
+
