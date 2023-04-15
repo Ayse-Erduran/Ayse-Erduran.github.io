@@ -146,7 +146,7 @@ html, body {
 
 .structure {
     width: 100%;
-    background: url("../images/leros-structure-background.png");
+    background: url("./images/leros-structure-background.png");
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
     background-repeat: no-repeat;
     background-size: cover;
@@ -352,54 +352,54 @@ hr {
 }
 
 #topic-1 {
-    background-image: url("../images/topics/1.png");
+    background-image: url("./images/topics/1.png");
     background-size: 254px 134px;
 }
 #topic-2 {
-    background-image: url("../images/topics/2.png");
+    background-image: url("./images/topics/2.png");
     background-size: 254px 134px;
 }
 #topic-3 {
-    background-image: url("../images/topics/3.png");
+    background-image: url("./images/topics/3.png");
     background-size: 159px 272px;
 }
 #topic-4 {
-    background-image: url("../images/topics/4.png");
+    background-image: url("./images/topics/4.png");
     background-size: 192px 272px;
 }
 #topic-5 {
-    background-image: url("../images/topics/5.png");
+    background-image: url("./images/topics/5.png");
     background-size: 129px 134px;
 }
 #topic-6 {
-    background-image: url("../images/topics/6.png");
+    background-image: url("./images/topics/6.png");
     background-size: 129px 134px;
 }
 
 #topic-7 {
-    background-image: url("../images/topics/7.png");
+    background-image: url("./images/topics/7.png");
     background-size: 259px 134px;
 }
 #topic-8 {
-    background-image: url("../images/topics/8.png");
+    background-image: url("./images/topics/8.png");
     background-size: 354px 134px;
 }
 #topic-9 {
-    background-image: url("../images/topics/9.png");
+    background-image: url("./images/topics/9.png");
     background-size: 354px 134px;
 }
 #topic-10 {
-    background-image: url("../images/topics/10.png");
+    background-image: url("./images/topics/10.png");
     background-size: 129px 134px;
 }
 
 #topic-11 {
-    background-image: url("../images/topics/11.png");
+    background-image: url("./images/topics/11.png");
     background-size: 129px 134px;
 }
 
 #topic-12 {
-    background-image: url("../images/topics/12.png");
+    background-image: url("./images/topics/12.png");
     background-size: 259px 134px;
 }
 

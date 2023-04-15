@@ -1,12 +1,27 @@
-//SET LANGUAGE STYLING:
-const currentPage = window.location.href.split("/");
-const selectedLanguage = currentPage[3];
-const selectedCategory = currentPage[4].split(".html")[0];
+function getSelectedLanguage() {
+    const currentPage = window.location.href;
+    let selectedLanguage = "en";
+    if(currentPage.search("/el/") > -1) {
+        selectedLanguage = "el";
+    }
+    return selectedLanguage;
+}
+
+function getSelectedCategory() {
+    const currentPage = window.location.href;
+    let selectedCategory = "";
+    if(getSelectedLanguage() == "en") {
+        selectedCategory = currentPage.split("/")[3].split(".html")[0];
+    } else {
+        selectedCategory = currentPage.split("/")[4].split(".html")[0];
+    }
+    return selectedCategory;
+}
 
 function updateLangStyles() {
     const enButton = document.getElementsByName("en")[0];
     const elButton = document.getElementsByName("el")[0];
-    if(selectedLanguage == "en") {
+    if(getSelectedLanguage() == "en") {
         enButton.classList.add('selected-language');
         elButton.classList.remove('selected-language');
     } else {
@@ -22,16 +37,23 @@ function updateCatStyles() {
     const sponsors = document.getElementsByClassName("navbar-sponsors")[0];
     const archive = document.getElementsByClassName("navbar-archive")[0];
     [description, resources, participants, sponsors, archive].forEach(cat => cat.classList.remove('selected-category'));
-    if(selectedCategory == "about") {
-        description.classList.add('selected-category');
-    } else if(selectedCategory == "participants") {
-        participants.classList.add('selected-category');
-    } else if(selectedCategory == "resources") {
-        resources.classList.add('selected-category');
-    } else if(selectedCategory == "sponsors") {
-        sponsors.classList.add('selected-category');
-    } else if(selectedCategory == "archive") {
-        archive.classList.add('selected-category');
+    switch(getSelectedCategory()) {
+        case "about":
+            console.log("ANBOUT");
+            description.classList.add('selected-category');
+            return;
+        case "participants":
+            participants.classList.add('selected-category');
+            return;
+        case "resources":
+            resources.classList.add('selected-category');
+            return;
+        case "sponsors":
+            sponsors.classList.add('selected-category');
+            return;
+        case "archive":
+            archive.classList.add('selected-category');
+            return;
     }
 }
 
@@ -62,10 +84,15 @@ function sendEmail(emailAddress) {
 
 
 function selectLanguage(newLang) {
+    const prevLang = getSelectedLanguage();
     const oldUrl = window.location.href;
-    const prevLang = oldUrl.split("/")[3];
-    const newUrl = oldUrl.replace(`/${prevLang}/`, `/${newLang}/`);
-    console.log("OLD", oldUrl);
-    console.log("NEW", newUrl);
+    let newUrl;
+    if(prevLang == "en") {
+        const oldUrlArr = oldUrl.split("/");
+        oldUrlArr.splice(3, 0, "el");
+        newUrl = oldUrlArr.join("/");
+    } else {
+        newUrl = oldUrl.replace("el/", "");
+    }
     window.location.href = newUrl;
 }
