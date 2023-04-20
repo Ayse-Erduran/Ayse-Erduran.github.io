@@ -36,10 +36,10 @@ function updateCatStyles() {
     const participants = document.getElementsByClassName("navbar-participants")[0];
     const sponsors = document.getElementsByClassName("navbar-sponsors")[0];
     const archive = document.getElementsByClassName("navbar-archive")[0];
-    [description, resources, participants, sponsors, archive].forEach(cat => cat.classList.remove('selected-category'));
+    const unspeakables = document.getElementsByClassName("navbar-unspeakables")[0];
+    [description, resources, participants, sponsors, archive, unspeakables].forEach(cat => cat.classList.remove('selected-category'));
     switch(getSelectedCategory()) {
-        case "about":
-            console.log("ANBOUT");
+        case "description":
             description.classList.add('selected-category');
             return;
         case "participants":
@@ -54,6 +54,9 @@ function updateCatStyles() {
         case "archive":
             archive.classList.add('selected-category');
             return;
+        case "unspeakables":
+            unspeakables.classList.add('selected-category');
+            return;
     }
 }
 
@@ -67,7 +70,6 @@ function signUp(){
 function toggleStructureCategory() {
     const workshopsButton = document.getElementsByClassName("workshops-button")[0];
     const roundTablesButton = document.getElementsByClassName("round-tables-button")[0];
-    const structureInfo = document.getElementById("structure-info");
     workshopsButton.classList.toggle('selected-category');
     roundTablesButton.classList.toggle('selected-category');
 
@@ -77,6 +79,9 @@ function toggleStructureCategory() {
     workshopsInfo.classList.toggle('hidden');
 }
 
+function contact() {
+    window.open('mailto:np255@columbia.edu,ssg93@columbia.edu');
+}
 
 function sendEmail(emailAddress) {
     window.open('mailto:' +  emailAddress);
@@ -96,3 +101,23 @@ function selectLanguage(newLang) {
     }
     window.location.href = newUrl;
 }
+
+
+
+function displayAcknowledgementPrompt() {
+   const storedUserEmail = localStorage.getItem('acknowledgedEmail');
+   if(!storedUserEmail) {
+    const email = prompt("This section contains sensitive material that some readers might find disturbing. Please do not share or upload any of the content. Enter your email address to acknowledge this message and access the page");
+    //validate address. 
+    localStorage.setItem('acknowledgedEmail', email);
+    // send verification email
+    // once the verification email is clicked send an email to myself via firebsae
+   } 
+   const oldUrl = window.location.href;
+   const oldUrlArr = oldUrl.split("/");
+   const newUrl = oldUrlArr.slice(0, oldUrlArr.length - 1).join("/") + "/unspeakables.html";
+   window.location.href = newUrl;
+}
+      
+
+

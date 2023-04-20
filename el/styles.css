@@ -29,8 +29,8 @@ html, body {
 }
 
 .lhs-logo-header {
-    height: 100px;
-    width: 155px;
+    height: 60px;
+    width: 90px;
 }
 
 .lhs-logo-header:hover {
@@ -44,16 +44,20 @@ html, body {
 }
 
 .logo-text {
-    width: 162px;
+    width: 120px;
     font-family: 'Roboto';
     letter-spacing: 0.5px;
     font-weight: 300;
-    font-size: 22px;
-    margin-left: 23px;
-    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
-.navbar-link-container {
+.navbar-unspeakables {
+    text-decoration: none;
+}
+
+.navbar-link-container,
+.navbar-unspeakables {
     font-family: 'Manrope';
     letter-spacing: 0.5px;
     font-weight: 300;
@@ -65,7 +69,8 @@ html, body {
     padding-right: 10px; 
 }
 
-.language-button {
+.language-button,
+.navbar-unspeakables {
     all:unset;
 }
 
@@ -74,13 +79,15 @@ html, body {
 .navbar-participants,
 .navbar-sponsors,
 .navbar-archive,
-.language-button {
+.language-button,
+.navbar-unspeakables {
     text-decoration: none;
     color: #000;
 }
 
 .navbar-link-container > a:hover,
-.language-button:hover {
+.language-button:hover,
+.navbar-unspeakables:hover {
     color: #403F3F;
 }
 
@@ -94,17 +101,18 @@ html, body {
 }
 
 .intro {
-    font-size: 42px;
+    font-size: 36px;
     font-family: 'Roboto';
     letter-spacing: 0.5px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 65px;
     width: 60%;
-    margin-left: 68px;
+    margin-left: 250px;
     margin-bottom: 96px;
-    margin-top: 110px;
+    margin-top: 50px;
     color: #403F3F;
 }
+
 
 .landing-image {
     width: 100%;
@@ -228,7 +236,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    column-gap: 50%;
+    column-gap: 40%;
     font-family: 'Manrope';
     letter-spacing: 0.5px;
     font-size: 18px;
@@ -236,7 +244,6 @@ hr {
     padding-top: 28px;
     padding-bottom: 80px;
 }
-
 
 .address > p,
 .contact > p {
@@ -419,6 +426,13 @@ hr {
     background-size: 259px 134px;
 }
 
+.about-page-questions-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 108px;
+    align-items: center;
+}
+
 
 .about-page-questions-intro {
     font-family: 'Manrope';
@@ -428,27 +442,18 @@ hr {
     line-height: 30px;
     margin-top: 85px;
     margin-bottom: 85px;
-}
-
-.about-page-questions-container {
-    display: flex;
-    margin-bottom: 108px;
-}
-
-.about-page-questions-container > img {
-    width: 483px;
-    border-radius: 5px;
+    width: 90%;
 }
 
 .about-page-questions {
-    margin-left: 100px;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto';
     letter-spacing: 0.5px;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 50px;
+    width: 90%;
 }
 
 .about-page-questions-left-aligned {
@@ -641,4 +646,39 @@ hr {
 .artemis-link {
     text-decoration: none;
     color: #FFFFFF;
+}
+
+.contact-section {
+    width: 100%;
+    background-color: #403F3F;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    padding-left: 10%;
+    margin-bottom: 40px;
+}
+
+.contact-prompt {
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 36px;
+    color: white;
+}
+
+.contact-button {
+    background-color: #FFFFFF;
+    color: #403F3F;
+    width: 204px;
+    height: 58px;
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+}
+
+.contact-button:hover {
+    background-color: #c7c5c5;
+    color: #232323;
 }

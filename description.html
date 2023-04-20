@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Leros Humanism Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../app.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo-container">
+                <img src="./images/logos/lhs.png" alt="Logo for The Leros Humanism Seminars" class="lhs-logo-header">
+                <h1 class="logo-text">LEROS HUMANISM PROJECT</h1>
+            </a>
+            <div class="navbar-link-container">
+                <a href="description" class="navbar-about">Description</a>
+                <a href="participants" class="navbar-participants">Participants</a>
+                <a href="resources" class="navbar-resources">Resources</a>
+                <a href="sponsors" class="navbar-sponsors">Sponsors</a>
+                <a href="archive" class="navbar-archive">Archive</a>
+                <button class="navbar-unspeakables" onclick="displayAcknowledgementPrompt()">Unspeakables</button>
+                <div class="lang-selection">
+                    <button name="en" class="language-button" onclick="selectLanguage('en')">EN</button>
+                    <span>|</span>
+                    <button name="el" class="language-button" onclick="selectLanguage('el')">EL</button>                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="section-container">
+            <h2 class="section-title">Description</h2>
+            <div class="section-content">
+                <h3 class="about-page-section-content-title">Humanism: the incorporation of the human being into its surrounding species-beings in the production of a space of mutual existence and respect.</h3>
+                <p class="about-page-section-content-parag">
+                The Leros Humanism Seminars/LSH/ΣΛ are a series of yearly intellectual encounters to take place on the island of Leros in the first week of July. Starting with the inaugural event in the week of July 3rd, 2023, the seminars seek to bring together scholars, artists, and activists along with college students and post-graduates (from Greece and abroad), as well as interested local population, in order to (re)consider collectively the multifarious premises of the human as individual and as social living-being while engaging different discourses and practices of conflict, communication, and coexistence.
+                <br/>
+                <br/>
+                We are putting this Seminar Series on Leros together as a minimum tribute to this magical island that has given to so many of us so many reasons for stochastic reflection, has pushed our limits of comfortable thought, and has challenged the conceptual certainties of what is a place, what is space, what is existence, what is the human being, what is confinement, what is order and what disorder, who is familiar and who is a stranger, what are the amplitudes and the limits of belonging, just to name a few. And it has done so in perfect dissonance with its physical environment which is nothing short of sublime.
+                <br/>
+                <br/>
+                The broad object of the seminars is to field anew the question of “what is human” and how “what is human” is determined in numerous registers of history and life by reconceptualizing humanism away and against its established and unexamined presumptions. Topics and domains of inquiry, to be explored presently and in the coming years, include: 
+                </p>
+            </div>
+        </div>
+        <div class="about-page-topics-container">
+            <div class="about-page-topics">
+                <div class="topics-vertical-group">
+                    <div class="topics-round topics-vertical-group-item" id="topic-1"><span class="text-shadow">Catastrophic environments</span></div>
+                    <div class="topics-round topics-vertical-group-item" id="topic-2"><span class="text-shadow">Education and pedagogy</span></div>
+                </div>
+                <div class="topics-horizontal-group">
+                    <div class="topics-horizontal-group-item topics-round topics-tall" id="topic-3"><span class="centered-text text-shadow">Boundaries and borders</span></div>
+                    <div class="topics-horizontal-group-item topics-round topics-tall" id="topic-4"><span class="centered-text text-shadow">Legality and illegality</span></div>
+                </div>
+                <div class="topics-vertical-group">
+                    <div class="topics-horizontal-group">
+                        <div class="topics-round topics-horizontal-group-item" id="topic-5"><span class="centered-text text-shadow">Critical arts and anti-arts</span></div>
+                        <div class="topics-round topics-horizontal-group-item" id="topic-6"><span class="centered-text text-shadow">Textures and architectures</span></div>
+                    </div>
+                    <div class="topics-single-wide topics-round" id="topic-7"><span class="centered-text text-shadow">Confinements and the commons</span></div>
+                </div>
+                <div class="topics-vertical-group">
+                    <div class="topics-oval topics-vertical-group-item" id="topic-8"><span class="text-shadow">Colonialism in the "metacolony"</span></div>
+                    <div class="topics-oval topics-vertical-group-item" id="topic-9"><span class="text-shadow">Genders and sexualities</span></div>
+                </div>
+                <div class="topics-vertical-group">
+                    <div class="topics-horizontal-group">
+                        <div class="topics-round topics-horizontal-group-item" id="topic-10"><span class="centered-text text-shadow">Borderlands and crossings</span></div>
+                        <div class="topics-round topics-horizontal-group-item" id="topic-11"><span class="centered-text text-shadow">Islands and Isolations</span></div>
+                    </div>
+                    <div class="topics-single-wide topics-round" id="topic-12"><span class="centered-text text-shadow">Structures and Infrastructures</span></div>
+                </div>                
+            </div>
+        </div>
+        <div class="about-page-questions-container">
+            <p class="about-page-questions-intro">Standing in the midst of these domains, the seminars will seek to problematize, interrogate, affirm, and posit anew specific questions that look backwards in history and forward in the present-future that test the capacity of humanist practices.</p>
+            <div class="about-page-questions">
+                <p class="about-page-questions-left-aligned">How does the humanism of the anti-colonial era address the dehumanization of populations in the present? </p>
+                <p class="about-page-questions-right-aligned">Can human beings assimilate technologies in an ontological sense, as posthumanists claim? </p>
+                <p class="about-page-questions-left-aligned">Can we think about the human as the non-ontological cornerstone of the social?</p>
+                <p class="about-page-questions-right-aligned">Can we think about the human as living-being determined by politics, beyond the Aristotelian political animal? </p>
+                <p class="about-page-questions-left-aligned">Can we, or should we, revisit “species-being?” </p>
+                <p class="about-page-questions-right-aligned">How can human-being as an ontological condition continue to stand in the context of anthropological (racial, sexual, cultural) difference? </p>                
+            </div>
+        </div>
+    </div>
+    <div class="contact-section">
+        <p class="contact-prompt">We'd love to hear from you</p>
+        <button class="contact-button" onclick="contact()">Contact Us</button>
+    </div>
+    <div class="footer">
+        <div class="logo-container">
+            <img src="./images/logos/lhs.png" alt="Logo for The Leros Humanism Seminars" class="lhs-logo-footer">
+            <h1 class="footer-logo-text">LEROS HUMANISM PROJECT</h1>
+        </div>
+        <div class="info-container">
+            <div class="address">
+                <p>Leros, Greece</p>
+                <p>(exact location TBD)</p>
+            </div>
+            <div class="contact">
+                <p class="contact-email" onclick="sendEmail('np255@columbia.edu')">np255@columbia.edu</p>
+                <p class="contact-email" onclick="sendEmail('ssg93@columbia.edu')">ssg93@columbia.edu</p>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>

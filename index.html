@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="../app.js" defer type="text/javascript"></script>
+    <script src="../app.js" defer></script>
 </head>
-<body>
+<body id="index-body">
     <nav class="navbar">
         <div class="navbar-container">
             <a href="/" class="logo-container">
@@ -19,11 +19,12 @@
                 <h1 class="logo-text">LEROS HUMANISM PROJECT</h1>
             </a>
             <div class="navbar-link-container">
-                <a href="about" class="navbar-about">Description</a>
+                <a href="description" class="navbar-about">Description</a>
                 <a href="participants" class="navbar-participants">Participants</a>
                 <a href="resources" class="navbar-resources">Resources</a>
                 <a href="sponsors" class="navbar-sponsors">Sponsors</a>
                 <a href="archive" class="navbar-archive">Archive</a>
+                <button class="navbar-unspeakables" onclick="displayAcknowledgementPrompt()">Unspeakables</button>
                 <div class="lang-selection">
                     <button name="en" class="language-button" onclick="selectLanguage('en')">EN</button>
                     <span>|</span>
@@ -69,7 +70,8 @@
         </div>
         <div class="info-container">
             <div class="address">
-                <p>Leros, Greece (exact location TBD)</p>
+                <p>Leros, Greece</p>
+                <p>(Exact location TBD)</p>
             </div>
             <div class="contact">
                 <p class="contact-email" onclick="sendEmail('np255@columbia.edu')">np255@columbia.edu</p>

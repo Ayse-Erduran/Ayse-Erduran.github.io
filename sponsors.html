@@ -19,11 +19,12 @@
                 <h1 class="logo-text">LEROS HUMANISM PROJECT</h1>
             </a>
             <div class="navbar-link-container">
-                <a href="about" class="navbar-about">Description</a>
+                <a href="description" class="navbar-about">Description</a>
                 <a href="participants" class="navbar-participants">Participants</a>
                 <a href="resources" class="navbar-resources">Resources</a>
                 <a href="sponsors" class="navbar-sponsors">Sponsors</a>
                 <a href="archive" class="navbar-archive">Archive</a>
+                <button class="navbar-unspeakables" onclick="displayAcknowledgementPrompt()">Unspeakables</button>
                 <div class="lang-selection">
                     <button name="en" class="language-button" onclick="selectLanguage('en')">EN</button>
                     <span>|</span>
@@ -71,15 +72,19 @@
             </div>
         </div>
     </div>
+    <div class="contact-section">
+        <p class="contact-prompt">We'd love to hear from you</p>
+        <button class="contact-button" onclick="contact()">Contact Us</button>
+    </div>
     <div class="footer">
-        <hr>
         <div class="logo-container">
             <img src="./images/logos/lhs.png" alt="Logo for The Leros Humanism Seminars" class="lhs-logo-footer">
             <h1 class="footer-logo-text">LEROS HUMANISM PROJECT</h1>
         </div>
         <div class="info-container">
             <div class="address">
-                <p>Leros, Greece (exact location TBD)</p>
+                <p>Leros, Greece</p>
+                <p>(exact location TBD)</p>
             </div>
             <div class="contact">
                 <p class="contact-email" onclick="sendEmail('np255@columbia.edu')">np255@columbia.edu</p>
