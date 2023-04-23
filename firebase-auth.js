@@ -35,7 +35,7 @@ function signIn() {
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
             localStorage.setItem('verifiedUser', true);
-            navigateToPage("unspeakables.html");
+            navigateToPage("unspeakables");
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -69,7 +69,7 @@ function signUp() {
     const password = document.getElementById("password").value;
     createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
-            navigateToPage("unspeakables.html");
+            navigateToPage("unspeakables");
         })
         .catch((error) => {
             const errorCode = error.code;

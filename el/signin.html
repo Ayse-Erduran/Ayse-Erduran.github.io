@@ -13,12 +13,13 @@
 <body id="index-body">
     <form onsubmit="return false;">
         <label for="email">Email</label><br>
-        <input type="text" id="email" value=""><br>
+        <input type="text" id="email" name="email" value=""><br>
         <label for="password">Password</label><br>
-        <input type="password" id="password" value=""><br><br>
-        <button id="signup-button">Submit</button>
-      </form> 
-    <p>Already have an account? <a href="signin">Sign in</a></p>
-    <script type="module" src="./firebae-auth.js"></script>
+        <input type="password" id="password" name="password" value=""><br><br>
+        <button id="login-button">Submit</button>
+        <button id="reset-button">Reset password</button>
+    </form> 
+    <p>Don't have an account? <a href="signup">Sign up</a></p>
+    <script type="module" src="../firebase-auth.js"></script>
 </body>
 </html>
