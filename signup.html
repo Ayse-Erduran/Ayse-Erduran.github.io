@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Leros Humanism Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body id="index-body">
+    <form onsubmit="return false;">
+        <label for="email">Email</label><br>
+        <input type="text" id="email" name="email" value=""><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" value=""><br><br>
+        <button onclick="signUpFirebase()">Submit</button>
+      </form> 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js"
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js"
+        import {FIREBASE_API_KEY, FIREBASE_AUTH_DOMAIN, FIREBASE_DATABASE_URL, FIREBASE_PROJECT_ID, FIREBASE_STORAGE_BUCKET, FIREBASE_MESSAGING_SENDER_ID, FIREBASE_APP_ID, FIREBASE_MEASUREMENT_ID} from "./firebase-config.js"
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: FIREBASE_API_KEY,
+          authDomain: FIREBASE_AUTH_DOMAIN,
+          databaseURL: FIREBASE_DATABASE_URL,
+          projectId: FIREBASE_PROJECT_ID,
+          storageBucket: FIREBASE_STORAGE_BUCKET,
+          messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+          appId: FIREBASE_APP_ID,
+          measurementId: FIREBASE_MEASUREMENT_ID
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        window.signUpFirebase = function() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    console.log("USER CREDENTIAL: ", userCredential);
+                    const user = userCredential.user;
+                    console.log("USER: ", user)
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                });            
+        }
+
+        window.signInFirebase = function() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    console.log("USER CREDENTIAL: ", userCredential);
+                    const user = userCredential.user;
+                    console.log("USER: ", user)
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                });            
+        }
+      </script>
+    <script src="../app.js"></script>
+</body>
+</html>
