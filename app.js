@@ -63,7 +63,7 @@ function updateCatStyles() {
 updateLangStyles();
 updateCatStyles();
 
-function signUp(){
+function register(){
     window.open('mailto:np255@columbia.edu?cc=ssg93@columbia.edu&subject=Registration Request for Leros Humanism Seminars, July 2023', '_self');
 }
 
@@ -109,7 +109,7 @@ function getAuth() {
     if(localStorage.getItem('verifiedUser')) {
         window.location.href = newUrl + "/unspeakables.html";
     } else {
-        window.location.href = newUrl + "/signin.html";
+        window.location.href = newUrl + "/signup.html";
     }
 }
 
