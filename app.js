@@ -103,13 +103,23 @@ function selectLanguage(newLang) {
 }
 
 
+function getAuth() {
+    const oldUrlArr = window.location.href.split("/");
+    const newUrl = oldUrlArr.slice(0, oldUrlArr.length - 1).join("/");
+    if(localStorage.getItem('verifiedUser')) {
+        window.location.href = newUrl + "/unspeakables.html";
+    } else {
+        window.location.href = newUrl + "/signin.html";
+    }
+}
 
-function displayAcknowledgementPrompt() {
+/*function displayAcknowledgementPrompt() {
    const storedUserEmail = localStorage.getItem('acknowledgedEmail');
    if(!storedUserEmail) {
     const email = prompt("This section contains sensitive material that some readers might find disturbing. Please do not share or upload any of the content. Enter your email address to acknowledge this message and access the page");
     //validate address. 
     localStorage.setItem('acknowledgedEmail', email);
+    saveToFirebase(email);
     // send verification email
     // once the verification email is clicked send an email to myself via firebsae
    } 
@@ -117,7 +127,18 @@ function displayAcknowledgementPrompt() {
    const oldUrlArr = oldUrl.split("/");
    const newUrl = oldUrlArr.slice(0, oldUrlArr.length - 1).join("/") + "/unspeakables.html";
    window.location.href = newUrl;
-}
+}*/
       
 
-
+/*const database = firebase.database();
+function saveToFirebase(email) {
+    console.log("INSIDE SAVE TO FIREBASE!");
+    database.ref('/acknowledgement-emails/').set({email})
+    .then(function(snapshot) {
+        console.log("SUCCESSFULLY WRITTEN!");
+        success(); // some success method
+    }, function(error) {
+        console.log('error' + error);
+        error(); // some error method
+    });
+}*/

@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="../app.js" defer></script>
+    <link rel="stylesheet" href="styles.css"> 
+    <script defer src="../app.js"></script>
 </head>
 <body id="index-body">
     <nav class="navbar">
@@ -24,7 +24,7 @@
                 <a href="resources" class="navbar-resources">Resources</a>
                 <a href="sponsors" class="navbar-sponsors">Sponsors</a>
                 <a href="archive" class="navbar-archive">Archive</a>
-                <button class="navbar-unspeakables" onclick="displayAcknowledgementPrompt()">Unspeakables</button>
+                <button onclick="getAuth()" class="navbar-unspeakables">Unspeakables</button>
                 <div class="lang-selection">
                     <button name="en" class="language-button" onclick="selectLanguage('en')">EN</button>
                     <span>|</span>
