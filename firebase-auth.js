@@ -20,14 +20,27 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);   
 
 const loginButton = document.getElementById("login-button");
-loginButton?.addEventListener("click", () => signIn());
+loginButton?.addEventListener("click", () => {
+    if(!isAuthDisabled()) {
+        signIn();
+    }
+});
 
 const resetButton = document.getElementById("reset-button");
 resetButton?.addEventListener("click", () => resetPassword());
 
-
 const signUpButton = document.getElementById("signup-button");
-signUpButton?.addEventListener("click", () => signUp());
+signUpButton?.addEventListener("click", () => {
+    if(!isAuthDisabled()) {
+        signUp();
+    }
+});
+
+function isAuthDisabled() {
+    const agreement = document.getElementById("agreement");
+    return !agreement.checked;
+}
+
 
 function signIn() {
     const email = document.getElementById("email").value;
@@ -55,12 +68,14 @@ function resetPassword() {
     const email = document.getElementById("email").value;
     sendPasswordResetEmail(auth, email)
     .then(() => {
-        console.log("EMAIL SENT");
+        showSnackbarMessage("An email to reset your password was sent to inbox.")
     })
     .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log("ERROR:", errorMessage);
+        if(error.code === "auth/missing-email") {
+            showSnackbarMessage("Please enter the email address you'd like to reset.");
+        } else {
+            showSnackbarMessage(error.code);
+        }
     });
 }
 
@@ -72,8 +87,25 @@ function signUp() {
             navigateToPage("unspeakables");
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
+            console.log(error.code);
+            if(error.code === "auth/weak-password") {
+                showSnackbarMessage("Password should be at least 6 characters.");
+            } else if(error.code === "auth/email-already-in-use") {
+                showSnackbarMessage("The email you entered is already in use.");
+            } else {
+                showSnackbarMessage(error.message);
+            }
         });            
-}  
+}
 
+function showSnackbarMessage(message) {
+    // Get the snackbar DIV
+    const snackbar = document.getElementById("snackbar");
+    snackbar.innerHTML = message;
+
+    // Add the "show" class to DIV
+    snackbar.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+}

@@ -10,16 +10,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> 
 </head>
-<body id="index-body">
-    <form onsubmit="return false;">
-        <label for="email">Email</label><br>
-        <input type="text" id="email" name="email" value=""><br>
-        <label for="password">Password</label><br>
-        <input type="password" id="password" name="password" value=""><br><br>
-        <button id="login-button">Submit</button>
-        <button id="reset-button">Reset password</button>
-    </form> 
-    <p>Don't have an account? <a href="signup">Sign up</a></p>
+<body>
+    <div class="page-container">
+        <div class="section-container">
+            <div class="auth-form-section">
+                <h2 class="sponsors-title">Sign in to continue</h2>
+                <form onsubmit="return false;">
+                    <label class="auth-label" for="email">Email</label><br>
+                    <input class="auth-input" type="text" id="email" name="email" value=""><br>
+                    <label class="auth-label" for="password">Password</label><br>
+                    <input class="auth-input" type="password" id="password" name="password" value=""><br><br>
+                    <button id="login-button" disabled="isAuthDisabled()">Sign In</button>
+                </form> 
+                <p class="auth-prompt">Forgot your password? <button id="reset-button">Reset password</button></p>
+                <p class="auth-prompt">Don't have an account? <a class="auth-view-change-link" href="signup">Sign up</a></p>
+                <div id="snackbar"></div>
+            </div>
+            <div class="section-content">
+                <p class="disclaimer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris pellentesque pulvinar pellentesque habitant morbi tristique. Mauris ultrices eros in cursus turpis massa tincidunt. Convallis tellus id interdum velit laoreet. Scelerisque eu ultrices vitae auctor. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. Purus in massa tempor nec feugiat nisl pretium fusce. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Luctus venenatis lectus magna fringilla urna. Semper risus in hendrerit gravida rutrum. Quam vulputate dignissim suspendisse in est ante in. Lacus sed turpis tincidunt id aliquet risus feugiat in ante. Faucibus in ornare quam viverra. Et netus et malesuada fames ac. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+                    <br/><br/>
+                    Urna id volutpat lacus laoreet. Pretium lectus quam id leo in. Vel risus commodo viverra maecenas. Sollicitudin tempor id eu nisl nunc mi. Ut consequat semper viverra nam libero justo laoreet. Ac felis donec et odio pellentesque diam volutpat commodo sed. Arcu cursus euismod quis viverra nibh cras pulvinar. Ultrices dui sapien eget mi proin sed libero. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Facilisis sed odio morbi quis commodo. Ullamcorper malesuada proin libero nunc consequat. Eu non diam phasellus vestibulum lorem sed risus.
+                </p>
+                <div class="disclaimer small">
+                    <input type="checkbox" id="agreement" name="agreement" onchange="disableAuth()">
+                    <label for="agreement" class="agreement-prompt">I acknowledge the terms and conditions.</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function disableAuth() {
+            const authButton = document.getElementById("login-button");
+            if(document.getElementById('agreement').checked) {
+                authButton.disabled = false;
+            } else {
+                authButton.disabled = true;
+            }
+        }
+        disableAuth();
+    </script>
     <script type="module" src="./firebase-auth.js"></script>
 </body>
 </html>

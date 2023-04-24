@@ -64,7 +64,7 @@ updateLangStyles();
 updateCatStyles();
 
 function register(){
-    window.open('mailto:np255@columbia.edu?cc=ssg93@columbia.edu&subject=Registration Request for Leros Humanism Seminars, July 2023', '_self');
+    window.open('mailto:cjl2212@columbia.edu?cc=ssg93@columbia.edu,np255@columbia.edu&subject=Registration Request for Leros Humanism Seminars, July 2023', '_self');
 }
 
 function toggleStructureCategory() {
