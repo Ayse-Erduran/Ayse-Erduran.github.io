@@ -19,14 +19,14 @@ function getSelectedCategory() {
 }
 
 function updateLangStyles() {
-    const enButton = document.getElementsByName("en")[0];
-    const elButton = document.getElementsByName("el")[0];
+    const enButtons = document.getElementsByName("en");
+    const elButtons = document.getElementsByName("el");
     if(getSelectedLanguage() == "en") {
-        enButton.classList.add('selected-language');
-        elButton.classList.remove('selected-language');
+        enButtons.forEach(btn => btn.classList.add('selected-language'));
+        elButtons.forEach(btn => btn.classList.remove('selected-language'));
     } else {
-        enButton.classList.remove('selected-language');
-        elButton.classList.add('selected-language');
+        enButtons.forEach(btn => btn.classList.remove('selected-language'));
+        elButtons.forEach(btn => btn.classList.add('selected-language'));
     }
 }
 
@@ -88,11 +88,28 @@ function sendEmail(emailAddress) {
 }
 
 
+// function selectLanguage(newLang) {
+//     const prevLang = getSelectedLanguage();
+//     const oldUrl = window.location.href;
+//     let newUrl;
+//     if(prevLang == "en") {
+//         const oldUrlArr = oldUrl.split("/");
+//         oldUrlArr.splice(3, 0, "el");
+//         newUrl = oldUrlArr.join("/");
+//     } else {
+//         newUrl = oldUrl.replace("el/", "");
+//     }
+//     window.location.href = newUrl;
+// }
+
 function selectLanguage(newLang) {
-    const prevLang = getSelectedLanguage();
+    const oldLang = getSelectedLanguage();
+    if(oldLang === newLang) {
+        return;
+    }
     const oldUrl = window.location.href;
     let newUrl;
-    if(prevLang == "en") {
+    if(newLang == "el") {
         const oldUrlArr = oldUrl.split("/");
         oldUrlArr.splice(3, 0, "el");
         newUrl = oldUrlArr.join("/");
@@ -112,3 +129,10 @@ function getAuth() {
         window.location.href = newUrl + "/signup";
     }
 }
+
+function toggleMenu() {
+    const collapsedMenu = document.getElementsByClassName("collapsed-menu")[0];
+    collapsedMenu.classList.toggle("change");
+    const collapsedNavPage = document.getElementsByClassName("collapsed-menu-options")[0];
+    collapsedNavPage.classList.toggle("hide"); 
+  }

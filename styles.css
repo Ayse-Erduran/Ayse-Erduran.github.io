@@ -30,7 +30,7 @@ html, body {
 
 .lhs-logo-header {
     height: 60px;
-    width: 90px;
+    width: 110px;
 }
 
 .lhs-logo-header:hover {
@@ -39,7 +39,7 @@ html, body {
 
 .lhs-logo-footer {
     height: 75px;
-    width: 115px;
+    width: 125px;
     margin-right: 10px;
 }
 
@@ -51,11 +51,9 @@ html, body {
     font-weight: 400;
 }
 
-
-.lhs-logo-header1 {
+/* .lhs-logo-header1 {
     height: 100px;
     width: 155px;
-    border: 2px solid red;
 }
 .logo-text1 {
     width: 162px;
@@ -63,8 +61,7 @@ html, body {
     font-size: 22px;
     margin-left: 23px;
     font-weight: 400;
-    border: 2px solid green;
-}
+} */
 
 .navbar-unspeakables {
     text-decoration: none;
@@ -76,7 +73,7 @@ html, body {
     font-size: 16px;
     flex-basis: 1;
     display: flex;
-    column-gap: 27px;
+    column-gap: 15px;
     align-items: center;
     padding-right: 10px; 
 }
@@ -123,6 +120,8 @@ html, body {
     margin-bottom: 96px;
     margin-top: 50px;
     color: #403F3F;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-section {
@@ -203,7 +202,7 @@ html, body {
 
 .structure {
     width: 100%;
-    background: url("./images/leros-structure-background.png");
+    background: url("./images/leros-structure-background.jpg");
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
     background-repeat: no-repeat;
     background-size: cover;
@@ -304,6 +303,7 @@ hr {
     display: flex;
     flex-direction: row;
     margin-top: 100px;
+    flex-wrap: wrap;
 }
 
 .section-title {
@@ -558,7 +558,6 @@ hr {
     padding-bottom: 13px;
 }
 
-
 .resource-cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -612,6 +611,7 @@ hr {
 
 .participants > a {
     text-decoration: none;
+    color: black;
 }
 
 .participants > a:visited {
@@ -622,14 +622,18 @@ hr {
     color: #403F3F;
 }
 
-
 .sponsors-logo-section {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logos {
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 650px;
-
 }
 
 .sponsors-title {
@@ -686,6 +690,7 @@ hr {
     font-weight: 200;
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 20px;
 }
 
 .auth-label {
@@ -777,9 +782,8 @@ hr {
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 .show {
     visibility: visible !important; /* Show the snackbar */
-
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-However, delay the fade out process for 2.5 seconds */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
     font-family: "Raleway";
@@ -807,3 +811,149 @@ However, delay the fade out process for 2.5 seconds */
     to {bottom: 0; opacity: 0;}
 }
 
+.collapsed-menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsed-menu {
+    display: none;
+}
+
+.hide {
+    display: none !important;
+}
+
+.collapsed-menu-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 20px;
+    z-index: 1;
+    position: absolute;
+    top: 120px;
+    right: 60px;
+    min-height:700px;
+    min-width:  350px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+} 
+
+@media (min-width: 1107px) { 
+    .collapsed-menu-options {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 1106px) {
+    .sponsors-logo-section {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .section-content {
+        flex-basis: 100%;
+    }
+    .logos {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 30px
+    }
+    .navbar-link-container {
+        display:none;
+    }
+    .collapsed-menu {
+        background-color: transparent;
+        display: inline-block;
+        cursor: pointer;
+        visibility: visible;
+        position: absolute;
+        top: 80px;
+        right: 50px;
+    } 
+    .intro {
+        font-size: 28px;
+        font-family: 'Raleway';
+        font-weight: 500;
+        line-height: 65px;
+        width: 60%;
+        margin-left: 20%;
+        margin-bottom: 96px;
+        margin-top: 50px;
+        color: #403F3F;
+    }    
+    .landing-image {
+        width: 100%;
+    }
+    .description {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 110px;
+        margin-bottom: 150px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .auth-form-section {
+        flex-basis: 500px;
+    }
+
+}
+
+@media (max-width: 752px) {
+    .about-page-questions {
+        line-height: 30px;
+        width: 80%;
+    }    
+}
+
+@media (max-width: 550px) {
+    .resource-title {
+        font-size: 18px;
+        height: 120px;
+    }
+    
+    .citation {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .resource-author {
+        font-size: 16px;
+        font-weight: 200;  
+    }
+    .resource-card {
+        height: 300px;
+    }
+}
+@media (max-width: 536px) {
+    .about-page-questions-right-aligned {
+        margin-left: 0px;
+    }
+    .about-page-questions {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 200;
+        line-height: 30px;
+        width: 80%;
+    }
+    .contact-prompt {
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 28px;
+        color: white;
+    }
+    .contact-section {
+        min-height: 400px;
+    }
+}
