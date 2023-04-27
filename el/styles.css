@@ -829,7 +829,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 .collapsed-menu {
-    display: none !important;
+    display: none;
 }
 
 .hide {
