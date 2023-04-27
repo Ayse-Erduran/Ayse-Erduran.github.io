@@ -87,21 +87,6 @@ function sendEmail(emailAddress) {
     window.open('mailto:' +  emailAddress);
 }
 
-
-// function selectLanguage(newLang) {
-//     const prevLang = getSelectedLanguage();
-//     const oldUrl = window.location.href;
-//     let newUrl;
-//     if(prevLang == "en") {
-//         const oldUrlArr = oldUrl.split("/");
-//         oldUrlArr.splice(3, 0, "el");
-//         newUrl = oldUrlArr.join("/");
-//     } else {
-//         newUrl = oldUrl.replace("el/", "");
-//     }
-//     window.location.href = newUrl;
-// }
-
 function selectLanguage(newLang) {
     const oldLang = getSelectedLanguage();
     if(oldLang === newLang) {

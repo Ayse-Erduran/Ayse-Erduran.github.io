@@ -829,7 +829,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 .collapsed-menu {
-    display: none;
+    display: none !important;
 }
 
 .hide {
@@ -879,7 +879,7 @@ However, delay the fade out process for 2.5 seconds */
         column-gap: 30px
     }
     .navbar-link-container {
-        display:none;
+        display:none !important;
     }
     .collapsed-menu {
         background-color: transparent;
